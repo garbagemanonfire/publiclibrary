@@ -1,30 +1,31 @@
-# example book entry = ["The City in History", nf], ["Donald Rumsfield's Autobiography", f], ["Zen and The Art of Motorcyle Repair",r]
-
-puts "What is the title of your book?"
-title = []
-puts "What is the shelf type (f for ficton, nf for nonfiction, r for remove)?"
-shelftype = []
+# example book entry = ["The City in History", nonfiction], ["Donald Rumsfield's Autobiography", fiction], ["Zen and The Art of Motorcyle Repair",remove]
 
 class Book
-	def intialize(name)
+	def intializexZ(book)
 		@title
  		@shelftype
+ 		@fiction
+ 		@nonfiction
  	end
  	
 # Make the book object have "enshelf" and "unshelf" methods 
 # that control what shelf the book is sitting on.
 
 
-	def enshelf
-		if shelftype = 'f'
-			add record [title, shelftype] into @shelf
-			puts 'Added' + booktitle + 'to' + @shelftype
-		elsif shelftype = 'nf'
-			add record [title, shelftype] into @shelf
-			puts 'Added' + @booktitle + 'to' + @shelftype
-		elsif shelftype = 'r'
+	def enshelf(title)
+		@fiction []
+		@shelftype.each do |title| 
+		@fiction << $title if @shelftype  =='fiction'
+			return @fiction
+		elsif 
+		@nonfiction []	
+		@shelftype.each do |title| 
+		@nonfiction << $title if @shelftype  =='nonfiction'
+			return @fiction
+		elsif shelftype = 'remove'
 			puts 'Removed book from collection.'
 		else 
+			shelttype =''
 			puts 'Please give your book a shelf type.'
 		end
 	end
@@ -39,15 +40,14 @@ end
 
 class Shelf
 	def intialize(name)
-		@shelftypes []
-		@bookregister []
-		@shelfbookcount []
+		@booklist
+		@shelfcount
 	end
 
 #Each shelf should know what books it contains.
 
 	def booklist
-		shelfbooklist [total count by shelftype]
+		return '@selftype' + '@title.each do |title|,'
 	end
 end
 
